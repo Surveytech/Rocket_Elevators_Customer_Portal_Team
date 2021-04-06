@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Rocket Elevators Customer Portal</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Rocket Elevators - Customer Portal</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Index">Product Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Intervention" asp-action="Index">Intervention</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="border-top footer text-muted">
+        <div class="container">
+
+
+            <div class="row">
+
+                <!-- col #1 -->
+                <div class="col-md-8">
+
+                    <h3 class="letter-spacing-1">WHY US?</h3>
+
+                    <!-- Small Description -->
+                    <p>
+                        Rocket Elevators provide quality services for is clients since nearly 50 years. <br>
+                        Safety, quality and total commitment toward our partners is our #1 priority.
+                    </p>
+                    <h2>(418) 555-1234</h2>
+                </div>
+                <!-- /col #1 -->
+                <!-- col #2 -->
+                <div class="col-md-4">
+                    <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+                    <!-- Newsletter Form -->
+                    <p>Subscribe to Our Newsletter to get Important News</p>
+
+                    <!-- remove commentary of next line to activate the send button -->
+                    <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input type="email" name="email" class="form-control required" placeholder="Enter your Email">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="submit">Subscribe</button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /Newsletter Form -->
+
+                </div>
+                <!-- /col #2 -->
+
+            </div>
+
+
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <ul class="float-right m-0 list-inline mobile-block">
+                    <li>Terms &amp; Conditions</li>
+                    <li>&bull;</li>
+                    <li>Privacy</li>
+                </ul>
+                &copy; All Rights Reserved, Company LTD
+            </div>
+        </div>
+
+    </footer>
+    <!-- /FOOTER -->
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - Rocket_Elevators_Customer_Portal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
