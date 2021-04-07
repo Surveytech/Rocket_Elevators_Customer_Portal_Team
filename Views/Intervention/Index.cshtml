@@ -4,13 +4,112 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Intervention</title>
-</head>
-<body>
-</body>
-</html>
+<div class="row no-gutters wow slideInUp" data-wow-duration="1s">
+    <div class="container home-form col-md-4">
+
+        <form action="/intervention" accept-charset="UTF-8" method="post"></form>
+        <input name="utf8" type="hidden" value="" />
+        <input type="hidden" name="authenticity_token" value="zXlxyK1caPs6YLbrH7+0TuIsVITmbND4Ezo8/0B64KHoG/OGQrOBSO11dVDybyepw87vld7ewKjVYewyZGJDfQ==" />
+
+
+        <br />
+        <div class="field">
+            <label for="intervention_customer_id">Customer</label>
+            <select name="customer" id="customer" class="custom-select" required="required">
+                <option value="">Customer Company Name</option>
+                <option value="1">Hane-Borer</option>
+                <option value="2">Johns, Pagac and Goldner</option>
+                <option value="3">Gerlach-Durgan</option>
+                <option value="4">Gutmann Group</option>
+                <option value="5">Reichert-Stroman</option>
+                <option value="6">Leannon-Ondricka</option>
+                <option value="7">Kreiger LLC</option>
+                <option value="8">Rohan, Lemke and Goldner</option>
+                <option value="9">Gusikowski, Koelpin and Kunze</option>
+                <option value="10">Fisher-Zulauf</option>
+                <option value="11">Davis-Sporer</option>
+                <option value="12">Schneider, Lehner and Beer</option>
+                <option value="13">Kessler and Sons</option>
+                <option value="14">Macejkovic-O'Connell</option>
+                <option value="15">Kuhic-Legros</option>
+                <option value="16">Gleichner LLC</option>
+                <option value="17">Hartmann Inc</option>
+                <option value="18">Bergstrom and Sons</option>
+                <option value="19">Buckridge-Wiza</option>
+                <option value="20">Huel Group</option>
+                <option value="21">Dicki-Ratke</option>
+                <option value="22">Beahan and Sons</option>
+                <option value="23">Rowe LLC</option>
+                <option value="24">Yost-Crist</option>
+                <option value="25">Veum, Hane and Hamill</option>
+            </select>
+        </div>
+
+        <div class="field Building">
+            <label for="intervention_building_id">Building</label>
+            <select name="building" id="building" class="custom-select" required="required">
+                <option value="nil"> Building ID</option>
+            </select>
+        </div>
+
+        <br />
+
+        <div class="field Battery">
+            <label for="intervention_battery_id">Battery</label>
+            <select name="battery" id="battery" class="custom-select">
+                <option value="nil"> Battery ID</option>
+            </select>
+        </div>
+
+        <br />
+        <div class="field Column">
+            <label for="intervention_column_id">Column</label>
+            <select name="column" id="column" class="custom-select">
+                <option value="nil">Column ID</option>
+            </select>
+        </div>
+
+        <br />
+
+        <div class="field Elevator">
+            <label for="intervention_elevator_id">Elevator</label>
+            <select name="elevator" id="elevator" class="custom-select">
+                <option value="nil">Elevator ID</option>
+            </select>
+        </div>
+
+        <br />
+
+        <div class="field">
+            <label for="intervention_employee_id">Employee</label>
+            <select name="employee" id="employee" class="custom-select">
+                <option value="">Employee Name</option>
+                <option value="1">ID: 1 - Nicolas Genest</option>
+                <option value="2">ID: 2 - Nadya Fortier</option>
+                <option value="3">ID: 3 - Martin chantal</option>
+                <option value="4">ID: 4 - Mathieu Houde</option>
+                <option value="5">ID: 5 - David Boutin</option>
+                <option value="6">ID: 6 - Mathieu Lortie</option>
+                <option value="7">ID: 7 - Thomas Carrier</option>
+                <option value="8">ID: 8 - Admin1 Admin1</option>
+                <option value="9">ID: 9 - Admin Admin</option>
+            </select>
+        </div>
+
+        <br />
+
+        <div class="field">
+            <label for="intervention_report">Report</label>
+            <textarea name="report[Description]" id="report_Description" cols="50" rows="3"></textarea>
+        </div>
+
+        <br />
+
+        <div class="actions">
+            <input type="submit" name="commit" value="Send Intervention" class="btn btn-primary" data-disable-with="Send Intervention" />
+        </div>
+
+    </div>
+
+</div>
