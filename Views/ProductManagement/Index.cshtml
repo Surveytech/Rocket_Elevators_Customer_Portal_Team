@@ -28,15 +28,15 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Management</a>
                     </li>
-                    <li class="nav-item">
+                    @*<li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Battery</a>
-                    </li>
-                    <li class="nav-item">
+                    </li>*@
+                    @*<li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Column">Column</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Elevator">Elevator</a>
-                    </li>
+                    </li>*@
                 </ul>
             </div>
         </div>
@@ -53,9 +53,18 @@
 
                 <ul class="nav nav-tabs nav-top-border">
                     <li class="nav-item"><a class="nav-link text-dark" href="#info" data-toggle="tab">Personal Info</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#battery" data-toggle="tab">Battery</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#column" data-toggle="tab">Column</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#elevator" data-toggle="tab">Elevator</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Building">Building</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Battery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Column">Column</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Elevator">Elevator</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#product" data-toggle="tab">Product</a></li>
                 </ul>
 
@@ -101,7 +110,7 @@
               
                     <!-- /PERSONAL INFO TAB -->
                     <!-- Battery TAB -->
-                    <div class="tab-pane fade" id="battery">
+                    @*<div class="tab-pane fade" id="battery">
 
                         <form action="#" method="post">
 
@@ -124,7 +133,7 @@
                             </div>
                         </form>
 
-                    </div>
+                    </div>*@
                     <!-- /Battery TAB -->
                     <!-- Column TAB -->
                     <div class="tab-pane fade" id="column">

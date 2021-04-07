@@ -16,6 +16,26 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
             return View();
         }
 
+        public ActionResult Building()
+        {
+            return View();
+        }
+
+        public ActionResult Battery()
+        {
+            return View();
+        }
+
+        public ActionResult Column()
+        {
+            return View();
+        }
+
+        public ActionResult Elevator()
+        {
+            return View();
+        }
+
         // GET: ProductManagementController/Details/5
         public ActionResult Details(int id)
         {
