@@ -13,10 +13,88 @@
     @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="~/css/site.css" />*@
 </head>
-
-<head>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+<body>
+    <section>
         <div class="container">
+            <div class="row">
+
+                <!-- RIGHT -->
+
+                <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
+
+                    <ul class="nav nav-tabs nav-top-border">
+                        <li class="nav-item"><a class="nav-link text-dark" href="#info" data-toggle="tab">Personal Info</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#battery" data-toggle="tab">Battery</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#column" data-toggle="tab">Column</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#elevator" data-toggle="tab">Elevator</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#product" data-toggle="tab">Product</a></li>
+                    </ul>
+
+                    <div class="tab-content mt-20">
+
+                        <!-- PERSONAL INFO TAB -->
+                        <div class="tab-pane active box-static box-border-top p-30" id="info">
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <label class="form-control-label">First Name</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Last Name</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Phone Number</label>
+                                    <input type="text" placeholder="+1888-88-8888" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Company Name</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Project Name</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Message</label>
+                                    <textarea class="form-control" rows="3" placeholder="Message here..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Website Url</label>
+                                    <input type="text" placeholder="http://www.yourwebsite.com" class="form-control">
+                                </div>
+                                <div class="margiv-top10">
+                                    <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Save Changes </a>
+                                    <a href="#" class="btn btn-default">Cancel </a>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /PERSONAL INFO TAB -->
+                        <!-- Battery TAB -->
+                        <div class="tab-pane fade" id="battery">
+
+                            <form action="#" method="post">
+
+                                <div class="form-group">
+                                    <label class="form-control-label">Current Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">New Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Re-type New Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+
+                                <div class="margiv-top10">
+                                    <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Change Password</a>
+                                    <a href="#" class="btn btn-default">Cancel </a>
+                                </div>
+
+                            </form>
+
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -175,11 +253,17 @@
                                                 <div class="inline-group">
                                                     <label class="radio mt-0 mb-0">
                                                         <input type="radio" name="radioOption" checked=""><i></i> Yes
+
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
+                                                <td>
+                                                    <label class="checkbox m-0">
+                                                        <input type="checkbox" name="checkbox" checked=""><i></i> Yes
                                                     </label>
 
-                                                    <label class="radio mt-0 mb-0">
-                                                        <input type="radio" name="radioOption" checked=""><i></i> No
-                                                    </label>
                                                 </div>
                                             </td>
                                         </tr>
@@ -357,11 +441,9 @@
                     </div>
 
             </div>
-
         </div>
-    </div>
-</section>
-<!-- / -->
+    </section>
+    <!-- / -->
 
-
+</body>
 </html>
