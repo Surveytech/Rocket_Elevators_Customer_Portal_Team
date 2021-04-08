@@ -52,20 +52,20 @@
             <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
 
                 <ul class="nav nav-tabs nav-top-border">
-                    <li class="nav-item"><a class="nav-link text-dark" href="#info" data-toggle="tab">Personal Info</a></li>
-                    <li class="nav-item">
+                    <li class="nav-item"><a class="btn btn-outline-danger mdl-js-button mdl-js-ripple-effect" href="#info" data-toggle="tab">Personal Info</a></li>
+                    @*<li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Building">Building</a>
-                    </li>
+                    </li>*@
                     @*<li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Battery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Column">Column</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Elevator">Elevator</a>
                     </li>*@
-                    <li class="nav-item"><a class="nav-link text-dark" href="#product" data-toggle="tab">Product</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary mdl-js-button mdl-js-ripple-effect" asp-area="" asp-controller="ProductManagement" asp-action="Building">Product</a>
+                    </li>
+                    @*<li class="nav-item"><a class="nav-link text-dark" href="building" data-toggle="tab">Product</a></li>*@
                 </ul>
 
                 <div class="tab-content mt-20">
@@ -103,7 +103,7 @@
                             </div>
                             <div class="margiv-top10">
                                 <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Save Changes </a>
-                                <a href="#" class="btn btn-default">Cancel </a>
+                                <a href="#" class="btn btn-danger">Cancel </a>
                             </div>
                         </form>
                     </div>
