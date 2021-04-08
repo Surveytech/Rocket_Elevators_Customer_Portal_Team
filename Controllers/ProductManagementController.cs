@@ -11,78 +11,41 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
     {
         [Microsoft.AspNetCore.Authorization.Authorize]
         // GET: ProductManagementController
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
 
-        // GET: ProductManagementController/Details/5
-        public ActionResult Details(int id)
+        // GET: ProductManagementController/Battery
+        public IActionResult Battery()
         {
             return View();
         }
 
-        // GET: ProductManagementController/Create
-        public ActionResult Create()
+        // GET: ProductManagementController/Column
+        public IActionResult Column()
         {
             return View();
         }
 
-        // POST: ProductManagementController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ProductManagementController/Edit/5
-        public ActionResult Edit(int id)
+        // GET: ProductManagementController/Elevator
+        public IActionResult Elevator()
         {
             return View();
         }
-
-        // POST: ProductManagementController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> TestQuery()
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ProductManagementController/Delete/5
-        public ActionResult Delete(int id)
-        {
+            var response = await Program.queryAsync("query getCustomerByEmail($email: String!){}")
+                query($email String){ getCustomerByEmail(email: $email){ building { id battery{ id column{ id elevators{ id} } } } }
+                    ViewBag.customer = response["getCustomerByEmail"];
+                }
             return View();
         }
 
-        // POST: ProductManagementController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public static async Task<bool> GetInformations(string inputEmail)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var graphQLClient = new 
         }
+
     }
 }

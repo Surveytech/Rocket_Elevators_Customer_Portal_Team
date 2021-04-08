@@ -36,7 +36,8 @@ namespace Rocket_Elevators_Customer_Portal
             services.AddRazorPages();
 
             //services.AddScoped<IGraphQLClient>(s => new GraphQLHttpClient(Configuration["GraphQLURI"], new NewtonsoftJsonSerializer()));
-            //services.AddScoped<ResponseType>();
+            //services.AddScoped<Customer>();
+
             services.AddControllers();
         }
 
