@@ -22,5 +22,17 @@ namespace Rocket_Elevators_Customer_Portal
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+        public static async Task<dynamic> queryAsync(string query, object obj)
+        {
+            var graphQLClient = new GraphQLHttpClient("https://graphql-codeboxx.herokuapp.com/graphiql", new NewtonsoftJsonSerializer());
+
+            var getCustomerByEmailRequest = new GraphQL.GraphQLRequest
+            {
+                Query = query,
+                Variables = obj
+            };
+            var response = await graphQLClient.SendQueryAsync<dynamic>(getCustomerByEmailRequest);
+            return response.Data;
+        }
     }
 }
