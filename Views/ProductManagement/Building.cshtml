@@ -33,6 +33,7 @@
                     </div>
 
                     <ul class="list-group list-unstyled mb-0">
+                        <li class="list-group-item"><a href="Building">My Building</a></li>
                         <li class="list-group-item"><a href="Battery">My Battery</a></li>
                         <li class="list-group-item"><a href="Column">My Column</a></li>
                         <li class="list-group-item"><a href="Elevator">My Elevator</a></li>
@@ -42,81 +43,45 @@
                 </div>
 
 
-                <div class="side-custom-content float-left mt-0">
+                @*<div class="side-custom-content float-left mt-0">*@
 
-                    <h2 class="fs-16 font-regular mb-20 mt-6">
-                        <i class="fa fa-bar-chart-o mr-10"></i> BUILDINGS SECTION
-                        <span class="text-muted">(4)</span>
-                    </h2>
+
 
 
                     <div class="table-responsive">
 
-                        <table class="table table-hover fs-16 fw-400">
-                            <thead class="fs-14">
-                                <tr>
-                                    <th class="w-100 fw-600">ID</th>
-                                    <th class="fw-600">DATE</th>
-                                    <th class="w-200 fw-600">STATUS</th>
-                                    <th class="w-150 fw-600 text-center">Battery</th>
-                                    <th class="w-150 fw-600 text-center">Column</th>
-                                    <th class="w-150 fw-600 text-center">Elevator</th>
-                                    <th class="w-150 fw-600 text-center">Adresse</th>
-                                    <th class="w-150 fw-600 text-center"></th>
-                                </tr>
-                            </thead>
-
-                            <tbody class="fs-14">
-                                <tr>
-                                    <td>4155</td>
-                                    <td>Mon, Jun 5, 2017 / 11:05</td>
-                                    <td class="text-warning">PROCESSING</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center fw-400 fs-18">$88.99</td>
-                                    <td class="text-center">
-                                        <a href="pack-megashop-account-invoice.html" class="btn btn-flat btn-v1 btn-sm"><i class="fa fa-eye m-0 p-3"></i></a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>3122</td>
-                                    <td>Wed, Apr 24, 2017 / 11:05</td>
-                                    <td class="text-success">DELIVERED</td>
-                                    <td class="text-center">8</td>
-                                    <td class="text-center fw-400 fs-18">$690.44</td>
-                                    <td class="text-center">
-                                        <a href="pack-megashop-account-invoice.html" class="btn btn-flat btn-v1 btn-sm"><i class="fa fa-eye m-0 p-3"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2354</td>
-                                    <td>Tue, Feb 3, 2017 / 09:44</td>
-                                    <td class="text-muted">
-                                        CANCELED
-                                        <small class="block fs-12 fw-200">by request</small>
-                                    </td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center fw-400 fs-18">$188.65</td>
-                                    <td class="text-center">
-                                        <a href="pack-megashop-account-invoice.html" class="btn btn-flat btn-v1 btn-sm"><i class="fa fa-eye m-0 p-3"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3122</td>
-                                    <td>Wed, Apr 24, 2017 / 11:05</td>
-                                    <td class="text-danger">
-                                        REJECTED
-                                        <small class="block fs-12 fw-200">Invalid Credit Card</small>
-                                    </td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center fw-400 fs-18">$243.22</td>
-                                    <td class="text-center">
-                                        <a href="pack-megashop-account-invoice.html" class="btn btn-flat btn-v1 btn-sm"><i class="fa fa-eye m-0 p-3"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-
-                        </table>
+                        <section class="pb-0" id="interventions">
+                            <div class="container-fluid text-center pl-80 pr-80">
+                                <div class="col-md-12 pt-30">
+                                    <h1><span class="badge badge-danger">Building</span></h1>
+                                </div>
+                                <div class="row">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Building ID</th>
+                                                <th scope="col">Address</th>
+                                                <th scope="col">Battery</th>
+                                                <th scope="col">Column</th>
+                                                <th scope="col">Elevator</th>
+                                                <th scope="col">Create Intervention</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @*< @interventions.each do |intervention| >*@                @*need to add the function to fill the table*@
+                                            <tr scope="row">
+                                                <th>building id</th>
+                                                <td>address</td>
+                                                <td>battery id</td>
+                                                <td>column id</td>
+                                                <td>elevator Id</td>
+                                                <td>link_to 'Destroy', intervention, method: :delete, data: { confirm: 'Are you sure?' }</td>            @*need to add the function to push the info to request form*@
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
 
                     </div>
 
@@ -126,7 +91,7 @@
                     </div>
 
 
-                </div>
+                @*</div>*@
 
             </div>
 

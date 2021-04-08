@@ -10,126 +10,138 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Product Management</title>
-    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />*@
+
 </head>
 <body>
     <section>
-        <div class="container">
+        <div> class="container">
             <div class="row">
-
-                <!-- RIGHT -->
-
                 <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
 
                     <ul class="nav nav-tabs nav-top-border">
-                        <li class="nav-item"><a class="nav-link text-dark" href="#info" data-toggle="tab">Personal Info</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="#battery" data-toggle="tab">Battery</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="#column" data-toggle="tab">Column</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="#elevator" data-toggle="tab">Elevator</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="#product" data-toggle="tab">Product</a></li>
+                        <li class="nav-item"><a class="btn btn-outline-danger mdl-js-button mdl-js-ripple-effect" href="#info" data-toggle="tab">Personal Info</a></li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary mdl-js-button mdl-js-ripple-effect" asp-area="" asp-controller="ProductManagement" asp-action="Building">Product</a>
+                        </li>
+
                     </ul>
-
-                    <div class="tab-content mt-20">
-
-
-
-
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Management</a>
-                    </li>
-                    @*<li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Battery</a>
-                    </li>*@
-                    @*<li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Column">Column</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Elevator">Elevator</a>
-                    </li>*@
-                </ul>
-            </div>
-        </div>
-    </nav>
-</head>
-<!-- -->
-<section>
-    <div class="container">
-        <div class="row">
-
-            <!-- RIGHT -->
-
-            <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
-
-                <ul class="nav nav-tabs nav-top-border">
-                    <li class="nav-item"><a class="btn btn-outline-danger mdl-js-button mdl-js-ripple-effect" href="#info" data-toggle="tab">Personal Info</a></li>
-                    @*<li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Building">Building</a>
-                    </li>*@
-                    @*<li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Battery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Column">Column</a>
-                    </li>*@
-                    <li class="nav-item">
-                        <a class="btn btn-outline-primary mdl-js-button mdl-js-ripple-effect" asp-area="" asp-controller="ProductManagement" asp-action="Building">Product</a>
-                    </li>
-                    @*<li class="nav-item"><a class="nav-link text-dark" href="building" data-toggle="tab">Product</a></li>*@
-                </ul>
-
+                </div>
                 <div class="tab-content mt-20">
 
-                    <!-- PERSONAL INFO TAB -->
-                    <div class="tab-pane active box-static box-border-top p-30" id="info">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label class="form-control-label">First Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Last Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Phone Number</label>
-                                <input type="text" placeholder="+1888-88-8888" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Company Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Project Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Message</label>
-                                <textarea class="form-control" rows="3" placeholder="Message here..."></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Website Url</label>
-                                <input type="text" placeholder="http://www.yourwebsite.com" class="form-control">
-                            </div>
-                            <div class="margiv-top10">
-                                <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Save Changes </a>
-                                <a href="#" class="btn btn-danger">Cancel </a>
-                            </div>
-                        </form>
+
+                    <!--</div>-->
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Management</a>
+                            </li>
+
+                        </ul>
                     </div>
-              
-                    <!-- /PERSONAL INFO TAB -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- -->
+<section>
+    <div> class="container">
+        <div>
+            class="row">
+
+
+            -->
+            <form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+                <fieldset>
+                    <!-- required [php action request] -->
+                    <input type="hidden" name="action" value="contact_send" />
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <label>First Name *</label>
+                            <input type="text" name="contact[first_name]" value="" class="form-control required">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label>Last Name *</label>
+                            <input type="text" name="contact[last_name]" value="" class="form-control required">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <label>Email *</label>
+                            <input type="email" name="contact[email]" value="" class="form-control required">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label>Phone *</label>
+                            <input type="text" name="contact[phone]" value="" class="form-control required">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <label>Position *</label>
+                            <select name="contact[position]" class="form-control pointer required">
+                                <option value="">--- Select ---</option>
+                                <option value="Marketing">PR & Marketing</option>
+                                <option value="Developer">Web Developer</option>
+                                <option value="php">PHP Programmer</option>
+                                <option value="Javascript">Javascript Programmer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <label>Expected Salary *</label>
+                            <input type="text" name="contact[expected_salary]" value="" class="form-control required">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label>Start Date *</label>
+                            <input type="text" name="contact[start_date]" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <label>Experience *</label>
+                            <textarea name="contact[experience]" rows="4" class="form-control required"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <label>
+                                Website
+                                <small class="text-muted">- optional</small>
+                            </label>
+                            <input type="text" name="contact[website]" placeholder="http://" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>
+                                File Attachment
+                                <small class="text-muted">Curriculum Vitae - optional</small>
+                            </label>
+
+                            <!-- custom file upload -->
+                            <input class="custom-file-upload" name="contact[attachment]" type="file" id="file" data-btn-text="Select a File" />
+                            <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+                        </div>
+                    </div>
+
+                </fieldset>
 
 
 
+            </form>
+        </div>
+    </div>
 
+</section>
 </body>
 </html>

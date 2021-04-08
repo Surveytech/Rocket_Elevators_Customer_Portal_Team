@@ -3,19 +3,38 @@
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Threading.Tasks;
+//using System.Text.Encodings.Web;
+//using System.Text.Json;
+//using GraphQL.Client.Http;
+//using GraphQL.Client.Serializer.Newtonsoft;
 
-//namespace Rocket_Elevators_Customer_Portal.Controllers
+
+//namespace CustomerPortal.Controllers
 //{
 //    public class NewAccountController : Controller
 //    {
-//        public IActionResult Index()
+//        public static async Task<bool> GraphqlQuery(string inputEmail)
 //        {
-//            return View();
+//            var graphQLClient = new GraphQLHttpClient("https://rocketfoundationgraphqlapi.herokuapp.com/graphql", new NewtonsoftJsonSerializer());
+
+//            var checkIfEmailExistsRequest = new GraphQL.GraphQLRequest
+//            {
+//                Query = @"
+//                   query CheckEmail($email: String!){
+//                      checkIfEmailExists(email: $email)
+//                    }",
+//                OperationName = "CheckEmail",
+//                Variables = new
+//                {
+//                    email = inputEmail
+//                }
+//            };
+
+//            var graphQLResponse = await graphQLClient.SendQueryAsync<CustomerPortal.Models.checkIfEmailExistsRequest>(checkIfEmailExistsRequest);
+
+//            System.Diagnostics.Debug.WriteLine(graphQLResponse.Data.checkIfEmailExists);
+
+//            return graphQLResponse.Data.checkIfEmailExists;
 //        }
 //    }
-//    public class async Task<bool> GraphqlQuery(string inputEmail)
-//    {
-//        var graphQLClient = new GraphQLHttpClient("https://graphql-ruby.herokuapp.com/graphiql, new ")
-//    }
-
 //}
