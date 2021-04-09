@@ -17,13 +17,6 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
         }
 
         // GET: ProductManagementController/Battery
-        public IActionResult Building()
-
-        {
-            return View();
-        }
-
-        // GET: ProductManagementController/Battery
         public IActionResult Battery()
 
         {

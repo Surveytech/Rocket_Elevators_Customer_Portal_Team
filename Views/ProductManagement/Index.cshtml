@@ -14,14 +14,14 @@
 </head>
 <body>
     <section>
-        <div> class="container">
+        <div class="container">
             <div class="row">
                 <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
 
                     <ul class="nav nav-tabs nav-top-border">
                         <li class="nav-item"><a class="btn btn-outline-danger mdl-js-button mdl-js-ripple-effect" href="#info" data-toggle="tab">Personal Info</a></li>
                         <li class="nav-item">
-                            <a class="btn btn-outline-primary mdl-js-button mdl-js-ripple-effect" asp-area="" asp-controller="ProductManagement" asp-action="Building">Product</a>
+                            <a class="btn btn-outline-primary mdl-js-button mdl-js-ripple-effect" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Product</a>
                         </li>
 
                     </ul>
@@ -46,12 +46,11 @@
 
 <!-- -->
 <section>
-    <div> class="container">
-        <div>
-            class="row">
+    <div class="container">
+        <div class="row">
 
 
-            -->
+          
             <form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
                 <fieldset>
                     <!-- required [php action request] -->
@@ -94,8 +93,8 @@
 
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <label>Expected Salary *</label>
-                            <input type="text" name="contact[expected_salary]" value="" class="form-control required">
+                            <label>Company Name *</label>
+                            <input type="text" name="contact[company_name]" value="" class="form-control required">
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <label>Start Date *</label>
