@@ -14,7 +14,6 @@
         var row = "<option value=\"" + "" + "\">" + "Building" + "</option>";
         $(row).appendTo("select#Building");
     }
-    $("select#Customer").change(function () {
         console.log("Customer is changing")
         var id_value_string = $(this).val();
         if (id_value_string == "") {
@@ -26,7 +25,7 @@
             $.ajax({
                 dataType: "json",
                 cache: false,
-                url: 'https://csl-restapiweek-9.azurewebsites.net/Customers/' + id_value_string,        
+                url: 'https://csl-restapiweek-9.azurewebsites.net/Building/CustomerId/' + id_value_string,        
                 timeout: 5000,
                 error: function (XMLHttpRequest, errorTextStatus, error) {
                     alert("Failed to submit : " + errorTextStatus + " ;" + error);
@@ -45,8 +44,9 @@
                     });
                 }
             });
-        }
-    });//for battery
+    }
+
+    //for battery
     if ($("select#Building").val() == "") {
         $("select#Battery option").remove();
         var row = "<option value=\"" + "" + "\">" + "Battery" + "</option>";
