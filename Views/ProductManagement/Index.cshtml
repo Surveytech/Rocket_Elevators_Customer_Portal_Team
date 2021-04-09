@@ -10,268 +10,98 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Product Management</title>
-    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />*@
 </head>
-
-<head>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+  
+<body>
+    <section>
         <div class="container">
+            <div class="row">
+                <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
+                    <ul class="nav nav-tabs nav-top-border">
+                        <li class="nav-item"><a class="btn btn-outline-danger mdl-js-button mdl-js-ripple-effect" href="#info" data-toggle="tab">Personal Info</a></li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary mdl-js-button mdl-js-ripple-effect" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Product</a>
+                        </li>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Battery">Battery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Column">Column</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ProductManagement" asp-action="Elevator">Elevator</a>
-                    </li>
-                </ul>
+                    </ul>
+                </div>
+                <div class="tab-content mt-20">
+                    <!--</div>-->
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Management</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-</head>
+    </section>
+
 <!-- -->
 <section>
     <div class="container">
         <div class="row">
-
-            <!-- RIGHT -->
-
-            <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
-
-                <ul class="nav nav-tabs nav-top-border">
-                    <li class="nav-item"><a class="nav-link text-dark" href="#info" data-toggle="tab">Personal Info</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#battery" data-toggle="tab">Battery</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#column" data-toggle="tab">Column</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#elevator" data-toggle="tab">Elevator</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#product" data-toggle="tab">Product</a></li>
-                </ul>
-
-                <div class="tab-content mt-20">
-
-                    <!-- PERSONAL INFO TAB -->
-                    <div class="tab-pane active box-static box-border-top p-30" id="info">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label class="form-control-label">First Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Last Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Phone Number</label>
-                                <input type="text" placeholder="+1888-88-8888" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Company Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Project Name</label>
-                                <input type="text" placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Message</label>
-                                <textarea class="form-control" rows="3" placeholder="Message here..."></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Website Url</label>
-                                <input type="text" placeholder="http://www.yourwebsite.com" class="form-control">
-                            </div>
-                            <div class="margiv-top10">
-                                <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Save Changes </a>
-                                <a href="#" class="btn btn-default">Cancel </a>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- /PERSONAL INFO TAB -->
-                    <!-- Battery TAB -->
-                    <div class="tab-pane fade" id="battery">
-
-                        <form action="#" method="post">
-
-                            <div class="form-group">
-                                <label class="form-control-label">Current Password</label>
-                                <input type="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">New Password</label>
-                                <input type="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Re-type New Password</label>
-                                <input type="password" class="form-control">
-                            </div>
-
-                            <div class="margiv-top10">
-                                <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Change Password</a>
-                                <a href="#" class="btn btn-default">Cancel </a>
-                            </div>
-
-                        </form>
-
-                    </div>
-                    <!-- /Battery TAB -->
-                    <!-- Column TAB -->
-                    <div class="tab-pane fade" id="column">
-
-                        <form action="#" method="post">
-
-                            <div class="form-group">
-                                <label class="form-control-label">Current Password</label>
-                                <input type="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">New Password</label>
-                                <input type="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Re-type New Password</label>
-                                <input type="password" class="form-control">
-                            </div>
-
-                            <div class="margiv-top10">
-                                <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Change Password</a>
-                                <a href="#" class="btn btn-default">Cancel </a>
-                            </div>
-
-                        </form>
-
-                    </div>
-                    <!-- /Column TAB -->
-                    <!-- Elevator TAB -->
-                    <div class="tab-pane fade" id="elevator">
-
-                        <form action="#" method="post">
-                            <div class="sky-form">
-
-                                <table class="table table-bordered table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
-                                            <td>
-                                                <div class="inline-group">
-                                                    <label class="radio mt-0 mb-0">
-                                                        <input type="radio" name="radioOption" checked=""><i></i> Yes
-                                                    </label>
-
-                                                    <label class="radio mt-0 mb-0">
-                                                        <input type="radio" name="radioOption" checked=""><i></i> No
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
-                                            <td>
-                                                <label class="checkbox m-0">
-                                                    <input type="checkbox" name="checkbox" checked=""><i></i> Yes
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
-                                            <td>
-                                                <label class="checkbox m-0">
-                                                    <input type="checkbox" name="checkbox" checked=""><i></i> Yes
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
-                                            <td>
-                                                <label class="checkbox m-0">
-                                                    <input type="checkbox" name="checkbox" checked=""><i></i> Yes
-                                                </label>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-
-                            <div class="mt-10">
-                                <a href="#" class="btn btn-primary"><i class="fa fa-check"></i> Save Changes </a>
-                                <a href="#" class="btn btn-default">Cancel </a>
-                            </div>
-
-                        </form>
-
-                    </div>
-                    <!-- /Elevator TAB -->
-                    <!-- Product TAB -->
-                    <div class="tab-pane fade row pricetable-container" id="product">
-
-                        <div class="col-md-4 col-sm-4 price-table">
-                            <h3>START</h3>
-                            <p>
-                                $5.9
-                                <span>Per month</span>
-                            </p>
-
-                            <ul>
-                                <li>22GB Bandwidth</li>
-                                <li>3Tb Storage</li>
-                                <li>Unlimited Domains</li>
-                                <li>Free Setup</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">SIGN UP</a>
+            <form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+                <fieldset>
+                    <!-- required [php action request] -->
+                    <input type="hidden" name="action" value="contact_send" />
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <label>Company Name *</label>
+                            <input type="text" name="contact[company_name]" value="" class="form-control required">
                         </div>
-
-                        <div class="col-md-4 col-sm-4 price-table popular">
-                            <h3>PREMIUM</h3>
-                            <p>
-                                $9.9
-                                <span>Per month</span>
-                            </p>
-                            <ul>
-                                <li>22GB Bandwidth</li>
-                                <li>3Tb Storage</li>
-                                <li>Unlimited Domains</li>
-                                <li>Free Setup</li>
-                            </ul>
-                            <a href="#" class="btn btn-default">SIGN UP</a>
+                        <div class="col-md-12 col-sm-12">
+                            <label>Contact Full Name *</label>
+                            <input type="text" name="contact[cpy_contact_full_name]" value="" class="form-control required">
                         </div>
-
-                        <div class="col-md-4 col-sm-4 price-table">
-                            <h3>PROFESSIONAL</h3>
-                            <p>
-                                $14.9
-                                <span>Per month</span>
-                            </p>
-                            <ul class="pricetable-items">
-                                <li>22GB Bandwidth</li>
-                                <li>3Tb Storage</li>
-                                <li>Unlimited Domains</li>
-                                <li>Free Setup</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">SIGN UP</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <label>Phone *</label>
+                            <input type="text" name="contact[cpy_contact_phone]" value="" class="form-control required">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label>Contact Email *</label>
+                            <input type="email" name="contact[cpy_contact_email]" value="" class="form-control required">
                         </div>
 
                     </div>
-                    <!-- /Product TAB -->
-                </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <label>Description *</label>
+                            <textarea name="contact[cpy_description]" rows="4" class="form-control required"></textarea>
+                            @*<input type="text" name="contact[cpy_description]" value="" class="form-control required">*@
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <label>Tech. Authority Service Full Name *</label>
+                            <input type="text" name="contact[tech_authority_service_full_name]" value="" class="form-control required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <label>Tech.Service Phone *</label>
+                            <input type="text" name="contact[tech_authority_service_phone]" value="" class="form-control required">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label>Tech. Manager Service Email *</label>
+                            <input type="email" name="contact[tech_manager_service_email]" value="" class="form-control required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @*<button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block mt-30">*@
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">CONFIRM CHANGE</button>
 
-            </div>
-
+                            <span class="block font-lato">Thank you!</span>
+                            @*</button>*@
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </div>
 </section>
-<!-- / -->
-
-
+</body>
 </html>
