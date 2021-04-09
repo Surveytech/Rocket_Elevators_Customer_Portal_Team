@@ -34,7 +34,21 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
         {
             return View();
         }
-        //public async Task<IActionResult> TestQuery()
+
+        //public async Task<IActionResult> ExecuteQuery()
+        //{
+        //    var client = new GraphQLHttpClient(new GraphQLHttpClientOptions);
+        //    var request = new GraphQLRequest
+
+        //    {
+        //        Query = "query{customers{"
+        //    };
+
+        //    var response = await client.SendQueryAsync(request);
+        //    var customer = response.Data[customers];
+        //}
+
+        //public async Task<IActionResult> ExecuteQuery()
         //{
         //    var response = await Program.queryAsync("query getCustomerByEmail($email: String!){}");
         //        query($email String){ getCustomerByEmail(email: email){ building { id battery{ id column{ id elevators{ id} } } } }

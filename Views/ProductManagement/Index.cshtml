@@ -55,7 +55,6 @@
                 <fieldset>
                     <!-- required [php action request] -->
                     <input type="hidden" name="action" value="contact_send" />
-
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <label>First Name *</label>
@@ -66,7 +65,6 @@
                             <input type="text" name="contact[last_name]" value="" class="form-control required">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <label>Email *</label>
@@ -77,7 +75,6 @@
                             <input type="text" name="contact[phone]" value="" class="form-control required">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <label>Position *</label>
@@ -90,7 +87,6 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <label>Company Name *</label>
@@ -101,14 +97,12 @@
                             <input type="text" name="contact[start_date]" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <label>Experience *</label>
                             <textarea name="contact[experience]" rows="4" class="form-control required"></textarea>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <label>
@@ -118,29 +112,30 @@
                             <input type="text" name="contact[website]" placeholder="http://" class="form-control">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-12">
                             <label>
                                 File Attachment
                                 <small class="text-muted">Curriculum Vitae - optional</small>
                             </label>
-
                             <!-- custom file upload -->
                             <input class="custom-file-upload" name="contact[attachment]" type="file" id="file" data-btn-text="Select a File" />
                             <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @*<button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block mt-30">*@
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">CONFIRM CHANGE</button>
 
+                            <span class="block font-lato">Thank you!</span>
+                            </button>
+                        </div>
+                    </div>
                 </fieldset>
-
-
-
             </form>
         </div>
     </div>
-
 </section>
 </body>
 </html>
