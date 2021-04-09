@@ -10,14 +10,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Product Management</title>
-
 </head>
+  
 <body>
     <section>
         <div class="container">
             <div class="row">
                 <div class=" col-lg-9 col-md-9 col-sm-8 order-md-2 order-sm-2 mb-80">
-
                     <ul class="nav nav-tabs nav-top-border">
                         <li class="nav-item"><a class="btn btn-outline-danger mdl-js-button mdl-js-ripple-effect" href="#info" data-toggle="tab">Personal Info</a></li>
                         <li class="nav-item">
@@ -27,16 +26,12 @@
                     </ul>
                 </div>
                 <div class="tab-content mt-20">
-
-
                     <!--</div>-->
                     <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Management</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
@@ -48,9 +43,6 @@
 <section>
     <div class="container">
         <div class="row">
-
-
-          
             <form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
                 <fieldset>
                     <!-- required [php action request] -->
@@ -65,7 +57,6 @@
                             <input type="text" name="contact[cpy_contact_full_name]" value="" class="form-control required">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <label>Phone *</label>
@@ -77,7 +68,6 @@
                         </div>
 
                     </div>
-
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <label>Description *</label>
@@ -89,7 +79,6 @@
                             <input type="text" name="contact[tech_authority_service_full_name]" value="" class="form-control required">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <label>Tech.Service Phone *</label>
@@ -99,10 +88,7 @@
                             <label>Tech. Manager Service Email *</label>
                             <input type="email" name="contact[tech_manager_service_email]" value="" class="form-control required">
                         </div>
-
                     </div>
-
-
                     <div class="row">
                         <div class="col-md-12">
                             @*<button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block mt-30">*@
@@ -112,13 +98,19 @@
                             @*</button>*@
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @*<button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block mt-30">*@
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">CONFIRM CHANGE</button>
 
+                            <span class="block font-lato">Thank you!</span>
+                            </button>
+                        </div>
+                    </div>
                 </fieldset>
-
             </form>
         </div>
     </div>
-
 </section>
 </body>
 </html>
