@@ -1,9 +1,22 @@
-﻿
+﻿@model IEnumerable<Rocket_Elevators_Customer_Portal.Models.Customers> 
 @{
     ViewData["Title"] = "Intervention";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "www.compilemode.com";
 }
 
+@*<div class="form-horizontal">
+    <hr/>
+    <div class="form-group">
+        <table class="table table-responsive" style="width:400px">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(Model => Model.CompanyName)
+                </th>
+            </tr>
+        </table> 
+    </div>
+</div>*@
 
 <div class="row no-gutters wow slideInUp" data-wow-duration="1s">
 
@@ -18,37 +31,10 @@
         <div class="field">
             <span class="badge badge-primary">Customer</span>
             <label for="intervention_customer_id"></label>
-            <select name="customer" id="customer" class="custom-select" required="required">
-                <option value="">Customer Company Name</option>
-                <option value="1">Hane-Borer</option>
-                <option value="2">Johns, Pagac and Goldner</option>
-                <option value="3">Gerlach-Durgan</option>
-                <option value="4">Gutmann Group</option>
-                <option value="5">Reichert-Stroman</option>
-                <option value="6">Leannon-Ondricka</option>
-                <option value="7">Kreiger LLC</option>
-                <option value="8">Rohan, Lemke and Goldner</option>
-                <option value="9">Gusikowski, Koelpin and Kunze</option>
-                <option value="10">Fisher-Zulauf</option>
-                <option value="11">Davis-Sporer</option>
-                <option value="12">Schneider, Lehner and Beer</option>
-                <option value="13">Kessler and Sons</option>
-                <option value="14">Macejkovic-O'Connell</option>
-                <option value="15">Kuhic-Legros</option>
-                <option value="16">Gleichner LLC</option>
-                <option value="17">Hartmann Inc</option>
-                <option value="18">Bergstrom and Sons</option>
-                <option value="19">Buckridge-Wiza</option>
-                <option value="20">Huel Group</option>
-                <option value="21">Dicki-Ratke</option>
-                <option value="22">Beahan and Sons</option>
-                <option value="23">Rowe LLC</option>
-                <option value="24">Yost-Crist</option>
-                <option value="25">Veum, Hane and Hamill</option>
-            </select>
+            <input id="Customer" type="text" name="Customers" />
         </div>
 
-        <div class="field Building">
+        <div class="field building">
             <span class="badge badge-primary">Building</span>
             <label for="intervention_building_id"></label>
             <select name="building" id="building" class="custom-select" required="required">
@@ -58,7 +44,7 @@
 
         <br />
 
-        <div class="field Battery">
+        <div class="field battery">
             <span class="badge badge-primary">Battery</span>
             <label for="intervention_battery_id"></label>
             <select name="battery" id="battery" class="custom-select">
@@ -67,7 +53,7 @@
         </div>
 
         <br />
-        <div class="field Column">
+        <div class="field column">
             <span class="badge badge-primary">Column</span>
             <label for="intervention_column_id"></label>
             <select name="column" id="column" class="custom-select">
@@ -77,7 +63,7 @@
 
         <br />
 
-        <div class="field Elevator">
+        <div class="field elevator">
             <span class="badge badge-primary">Elevator</span>
             <label for="intervention_elevator_id"></label>
             <select name="elevator" id="elevator" class="custom-select">
@@ -87,7 +73,7 @@
 
         <br />
 
-        <div class="field">
+        <div class="field employee">
             <span class="badge badge-primary">Employee</span>
             <label for="intervention_employee_id"></label>
             <select name="employee" id="employee" class="custom-select">
@@ -119,5 +105,8 @@
         </div>
 
     </div>
-
 </div>
+@section Scripts
+{
+<script type="text/javascript" src="~/js/Intervention.js"></script>
+}
