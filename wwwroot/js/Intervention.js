@@ -1,13 +1,13 @@
 ﻿$(function () {
 
-    // $("select#Building").hide()
-    $(".building").hide()
+    //// $("select#Building").hide()
+    //$(".building").hide()
     // $("select#Battery").hide()
-    $(".battery").hide()
-    // $("select#Column").hide()
-    $(".column").hide()
-    // $("select#Elevator").hide()
-    $(".elevator").hide()
+    //$(".battery").hide()
+    //// $("select#Column").hide()
+    //$(".column").hide()
+    //// $("select#Elevator").hide()
+    //$(".elevator").hide()
 
     if ($("select#Customer").val() == "") {
         $("select#Building option").remove();
@@ -64,7 +64,7 @@
             $.ajax({
                 dataType: "json",
                 cache: false,
-                url: '/get_battery_by_building/' + id_value_string,
+                url: 'https://csl-restapiweek-9.azurewebsites.net/batteries/buildingId/' + id_value_string,
                 timeout: 5000,
                 error: function (XMLHttpRequest, errorTextStatus, error) {
                     alert("Failed to submit : " + errorTextStatus + " ;" + error);
@@ -103,7 +103,7 @@
             $.ajax({
                 dataType: "json",
                 cache: false,
-                url: '/get_column_by_battery/' + id_value_string,
+                url: 'https://csl-restapiweek-9.azurewebsites.net/columns/batteryId/' + id_value_string,
                 timeout: 5000,
                 error: function (XMLHttpRequest, errorTextStatus, error) {
                     alert("Failed to submit : " + errorTextStatus + " ;" + error);
@@ -142,7 +142,7 @@
             $.ajax({
                 dataType: "json",
                 cache: false,
-                url: '/get_elevator_by_column/' + id_value_string,
+                url: 'https://csl-restapiweek-9.azurewebsites.net/elevators/columnId/' + id_value_string,
                 timeout: 5000,
                 error: function (XMLHttpRequest, errorTextStatus, error) {
                     alert("Failed to submit : " + errorTextStatus + " ;" + error);
